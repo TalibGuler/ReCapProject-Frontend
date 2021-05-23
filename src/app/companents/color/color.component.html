@@ -1,0 +1,11 @@
+<ul class="list-group">
+  <li
+    (click)="setCurrentColor(color)"
+    routerLink="/cars/color/{{color.colorId}}"
+    *ngFor="let color of colors"
+    [class]="getCurrentColorClass(color)">
+    {{ color.name }}
+  </li>
+</ul>
+
+<h5 *ngIf="currentColor">{{ currentColor.name }} sectiniz</h5>
